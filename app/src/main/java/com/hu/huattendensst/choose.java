@@ -38,7 +38,6 @@ static String countstr;
         sharedPreference = new SharedPreference();
         arrayList=new ArrayList<>();
         arrayList=sharedPreference.getFavorites(choose.this);
-        System.out.println(getIntent().getStringExtra("doctorid"));
 
         qr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +45,9 @@ static String countstr;
                 Intent intent = new Intent(choose.this,qr_capture.class);
                 intent.putExtra("name",getIntent().getStringExtra("name"));
                 if(!lecture.getText().toString().isEmpty()){
-                intent.putExtra("lecture",lecture.getText());
+                intent.putExtra("lecture",lecture.getText().toString());
+                intent.putExtra("doctorid",getIntent().getStringExtra("doctorid"));
+                intent.putExtra("name",getIntent().getStringExtra("name"));
                 startActivity(intent);
                 }
                 else Toast.makeText(choose.this,"please fill lecture field",Toast.LENGTH_LONG);
@@ -84,9 +85,7 @@ static String countstr;
                             catch (NumberFormatException e){
                                 count =0;
                             }
-                            System.out.println(getIntent().getStringExtra("doctorid"));
                             if(password.equals(pass.getText()+"")){
-
                                 database.getReference(getIntent().getStringExtra("doctorid")).child(getIntent().getStringExtra("name")+"_"+lecture2.getText().toString()).child("count")
                                         .setValue(++count);
                                 database.getReference(getIntent().getStringExtra("doctorid")).child(getIntent().getStringExtra("name")+"_"+lecture2.getText().toString()).child(String.valueOf(count))

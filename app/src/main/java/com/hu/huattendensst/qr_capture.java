@@ -108,6 +108,9 @@ public class qr_capture extends AppCompatActivity implements Detector.Processor 
         Intent intent = new Intent(qr_capture.this, MainActivity.class);
         // this attribute for pass barcode value to item activity . . . ;
         intent.putExtra("key", barcode);
+        intent.putExtra("lecture",getIntent().getStringExtra("lecture"));
+        intent.putExtra("doctorid",getIntent().getStringExtra("doctorid"));
+        intent.putExtra("name",getIntent().getStringExtra("name"));
         startActivity(intent);
         finish();
     }
