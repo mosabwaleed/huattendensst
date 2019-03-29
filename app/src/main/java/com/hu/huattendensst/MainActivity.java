@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                             .setValue(++count);
                     database.getReference(getIntent().getStringExtra("doctorid")).child(getIntent().getStringExtra("name")+"_"+lecture).child(String.valueOf(count))
                             .setValue(arrayList.get(0).getId());
-
                     textView.setTextColor(Color.GREEN);
                     textView.setTextSize(50);
                     textView.setText("your attendees is  successful");
