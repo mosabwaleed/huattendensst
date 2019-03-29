@@ -20,8 +20,8 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="name"
                 android:paddingBottom="20dp"
+                android:text="name"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="297dp"
             android:layout_height="match_parent"
             android:layout_marginTop="90dp"
             android:gravity="center"
@@ -43,19 +43,19 @@
                 android:id="@+id/hall_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hall_num"
-                android:paddingRight="80dp"/>
+                android:paddingRight="80dp"
+                android:text="hall_num" />
 
             <TextView
                 android:id="@+id/days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="day"
-                android:paddingRight="60dp"/>
+                android:paddingRight="60dp"
+                android:text="day" />
 
             <TextView
                 android:id="@+id/sec_num"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:text="section number : 2" />
         </LinearLayout>
